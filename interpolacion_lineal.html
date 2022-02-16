@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpolación y extrapolación</title>
+    <script src="https://kit.fontawesome.com/50c13d7ffc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="index1.css">
+    <script src="jQuery/jquery-3.1.1.min.js"></script>
+    <script src="jQuery/jquery.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="metodos.js"></script>
+</head>
+
+<body align="left">
+    <div class="card text-white bg-dark" style="text-align:center;">
+        <div class="card-body">
+            <h4 class="card-title">INTERPOLACIÓN LINEAL</h4>
+        </div>
+    </div>
+    <div class="input-group" id="nav-ol">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">Estas aquí</li>
+            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        </ol>
+    </div>
+    <p>
+    <div class="instruc">
+        <small class="text-muted">Ingresa los valores que se necesitan:</small>
+    </div>
+    </p>
+    <div class="container" align="left">
+        <span class="badge rounded-pill bg-primary" id="Opciones">Opciones</span><br>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Activa la casilla para poner el valor real de f(x)</label>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10 input-group" style="margin-bottom:20px;">
+                <label for="valorx">X= </label>
+                <input type="text" id="valorx" class="form-control" onkeyup="this.value=solonum(this.value)" placeholder="Ingrese el valor de x" required>
+            </div>
+            <div class="col-sm-10 input-group" style="margin-bottom:20px;">
+                <label for="valorx">f(X)= </label>
+                <input type="text" id="valorfx" class="form-control" onkeyup="this.value=solonum(this.value)" placeholder="Valor de f(x)"
+                    required readonly>
+            </div>
+            <br>
+            <div class="col-sm-10 input-group" style="margin-bottom:20px;">
+                <label for="valorx">X<sub>0</sub>= </label>
+                <input type="text" id="valorx0" class="form-control" onkeyup="this.value=solonum(this.value)" placeholder="Ingrese el valor de x0" required>
+            </div>
+            <div class="col-sm-10 input-group" style="margin-bottom:20px;">
+                <label for="valorx">f(X<sub>0</sub>)= </label>
+                <input type="text" id="valorfx0" class="form-control" onkeyup="this.value=solonum(this.value)" placeholder="Ingrese el valor de f(x)" required>
+            </div><br>
+            <div class="col-sm-10 input-group" style="margin-bottom:20px;">
+                <label for="valorx">X<sub>1</sub>= </label>
+                <input type="text" id="valorx1" class="form-control" onkeyup="this.value=solonum(this.value)" placeholder="Ingrese el valor de x1" required>
+            </div>
+            <div class="col-sm-10 input-group" style="margin-bottom:20px;">
+                <label for="valorx">f(X<sub>1</sub>)= </label>
+                <input type="text" id="valorfx1" class="form-control" onkeyup="this.value=solonum(this.value)" placeholder="Ingrese el valor de f(x)" required>
+            </div><br>
+            <div align="center">
+                <button type="button" id="obtener" class="btn btn-lg btn-outline-primary">Obtener</button>
+                <br>
+                <button id="limpiar" class="btn btn-lg btn-outline-danger">Limpiar valores</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+    </div>
+    <div id="modalResultado" class="modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultados</h5>
+                </div>
+                <div class="modal-body" align="left">
+                    <p>f(x)=<label id="fxtotal"></label></p>
+                    <p>Error Verdadero: <label id="erverdadero"></label></p>
+                    <p>Error Relativo Porcentual:<label id="errelativo"></label></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="close_modal" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+                    <script>
+                        $("#close_modal").click(function () {
+                                $('#modalResultado').modal('hide');
+                            });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

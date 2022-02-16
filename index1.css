@@ -1,0 +1,115 @@
+*{
+    padding: auto;
+    margin: auto;
+    box-sizing: border-box;
+}
+body{
+    
+    color:black;
+    margin-bottom: 50px;
+}
+.instruc{
+    margin-left: 10px;
+}
+header{
+    background:#212121;
+    border-right:1px solid #e5e5e5;
+    margin-left:-65px;
+    padding-bottom: 4px;
+    color:white;
+    width:105%;
+    position:fixed;
+    z-index:999;
+}
+.title-header{
+    margin-left: 15px;
+    color:white;
+    position: relative;
+}
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+input[type="text"]{
+    border-radius: 20px;
+}
+fieldset {
+    border-style: solid;
+}
+legend {
+    border-width: 0.5px;
+    border-style:groove;
+    border-radius: 20px;
+}
+#legend1{
+    width:99%;
+}
+#obtener,#limpiar{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+#Opciones{
+    padding:20px;
+    font-size:1rem;
+    width:18%;
+    margin-left:-120px;
+    margin-bottom: 5px;
+}
+#search_bar{
+    width: 50%;
+    margin-top:10px;
+    font-family: Product Sans;
+    font-weight: bold;
+    font-size: 0.8 rem;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+#btn_search{
+    margin-top:10px;
+    font-family: Product Sans;
+    font-weight: bold;
+    font-size: 0.8 rem;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.modal-backdrop{
+    opacity: 0.7;
+}
+.modal-body{
+    margin-left: 0px;
+}
+#hr{
+    margin-left: 10px;
+    margin-top:-8px;
+    padding:3px;
+    border-color:black;
+    width:370px;
+}
+.form-check-input:hover,.form-check-label:hover{
+    cursor:pointer;
+}
+.mb-4{
+    width:90%;
+}
+img{
+    width: 325px;
+    height: 100px;
+}
+img:hover{
+    filter:brightness(70%);
+}
+#nav-ol{
+    left:-598px;
+}
+.input-group{
+    width:50%;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
