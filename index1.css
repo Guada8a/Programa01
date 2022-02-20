@@ -3,6 +3,40 @@
     margin: auto;
     box-sizing: border-box;
 }
+@media screen and (min-width:375px) and (max-width:768px){
+        input[type="text"]{
+            width:90%;
+            content:'\A';
+            white-space:pre;
+            font-size:12px;
+        }
+        #Opciones{
+            margin-left:1px;
+            width:30%;
+            padding: 15px;
+            font-size: 14px;
+        }
+        label{
+            font-size:10px;
+        }
+        #modalResultado{
+            top:50%;
+            margin-top:-30%;
+        }
+        #btnvolver{
+            margin-top:2px;
+            padding:10px;
+            font-size:10px;
+        }
+    }
+    @media (min-width: 1280px) {
+        #btnvolver{
+            margin-top:8px;
+        }
+        #modalResultado{
+            top:25%;
+        }
+    }
 body{
     
     color:black;
@@ -100,9 +134,6 @@ img{
 }
 img:hover{
     filter:brightness(70%);
-}
-#nav-ol{
-    left:-598px;
 }
 .input-group{
     width:50%;
