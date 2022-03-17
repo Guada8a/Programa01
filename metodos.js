@@ -11,8 +11,10 @@ $(document).ready(function () {
     $("#flexSwitchCheckDefault").click(function () {
         if ($("#valorfx").is('[readonly]')) {
             $(this).parent().siblings('div').children('div').children("#valorfx").prop('readonly', false);
+            $("#obtener").text('Obtener y calcular Et y �t');
         } else {
             $(this).parent().siblings('div').children('div').children("#valorfx").prop('readonly', true);
+            $("#obtener").text('Obtener');
             $("#valorfx").val('');
         }
     });
@@ -36,12 +38,14 @@ $(document).ready(function () {
         r = res ? res + " aprox." : 0;
         eve = ev ? ev : 0;
         ero = er ? er : 0;
-        $("#fxtotal").text(r);
-        $("#erverdadero").text(eve);
-        $("#errelativo").text(ero.toFixed(2) + "%");
+        if ($("#valorfx").is('[readonly]')) {
+            $("#body-modal").html("Valor de fx<br><p> f(x)=<label id='fxtotal'>" + r + "</label></p>");
+        } else {
+            $("#body-modal").html("<p> f(x)=<label id='fxtotal'>" + r + "</label></p>" +
+            "<p>Error Verdadero(E<sub>T</sub>): <label id='erverdadero'>" + eve + "</label></p>" +
+            "<p>Error Relativo Porcentual(&epsilon;<sub>T</sub>):<label id='errelativo'>" + ero.toFixed(2) + "%</label></p>");
+        }
         $('#modalResultado').modal('show');
-        
     });
     ////////////////////////////////////////////////////
-    
 });
